@@ -1,0 +1,6 @@
+1.tar xzf project.tar.gz 解压缩project包
+2.touch readme
+3.cat "txt" >> 1.rb
+4.printf "<h2>" > 1.html
+5.ssh-keygen -C 'your@email.address' -t rsa 创建SSH密匙
+6.SSH -v git@github.com 测试SSH连接
