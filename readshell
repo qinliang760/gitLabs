@@ -4,3 +4,6 @@
 4.printf "<h2>" > 1.html
 5.ssh-keygen -C 'your@email.address' -t rsa 创建SSH密匙
 6.SSH -v git@github.com 测试SSH连接
+7.删除
+rm
+rm -rf
