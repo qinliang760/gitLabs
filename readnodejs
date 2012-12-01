@@ -1,0 +1,2 @@
+1.grunt 使用
+首先确保安装了nodejs和npm，然后npm install -g grunt
