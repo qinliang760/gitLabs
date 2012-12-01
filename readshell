@@ -7,3 +7,4 @@
 7.删除
 rm
 rm -rf
+8.cygwin,gunwin32,win-bash等软件可以在windows系统里运行linux命令
