@@ -8,3 +8,8 @@
 rm
 rm -rf
 8.cygwin,gunwin32,win-bash等软件可以在windows系统里运行linux命令
+9.tidy是一个html语法检查工具，tidy -e -q index.html
+10.copy 有目录时可以-r做递归操作
+cp a.txt b.txt
+11.chmod
+chmod 777 -R /path

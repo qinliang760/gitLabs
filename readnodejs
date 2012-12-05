@@ -1,2 +1,43 @@
+/* grunt */
 1.grunt 使用
 首先确保安装了nodejs和npm，然后npm install -g grunt
+2.grunt init
+新建一个项目目录，目录下放置安装目录下init的JS
+grunt init:jquery 生成项目所需
+设置defaults.json件配置项目所需版本号等，放在创建的init目录下，与grunt的jquery.js同一目录下
+3.grunt lint 用Jshint检测语法
+lint:{
+	src:["src/a.js","src/*.js"]
+}
+4.grunt concat 合并
+concat:{
+	dist:{
+		src:["src/*.js"],
+		dest:"dist/ab.js"
+	}
+
+}
+5,grunt min 压缩
+min:{
+	dist:{
+		src:["src/*.js"],
+		dest:"dist/ab.min.js"
+	}
+}
+6,grunt watch 实时监测任务，file改动时出监测信息
+watch:{
+	scripts:{
+		files:"<config:lint.all>",
+		tasks:"lint qunit"
+	}
+}
+7.grunt server 启动一个静态web server
+server:{
+	port:8000,
+	base:"."
+}
+8,定义json files
+pkg:'<json:package.json>', 
+meta:{ banner:'/*! <%= pkg.name %> - v<%= pkg.version %> - '+ '<%= grunt.template.today("yyyy-mm-dd") %> */' }
+	
+	
