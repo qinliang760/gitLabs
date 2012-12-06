@@ -39,6 +39,8 @@ w 到下一个单词的开头
 e 到下个单词的结尾
 W
 E
+f
+t
 % 匹配括号
 */# 匹配光标当前所在的单词上一个/下一个
 7.打开、保存、退出
@@ -47,4 +49,41 @@ E
 :bn
 :bp
 
+8,宏录制
+qz -> /**/ -> q 录制宏z -> 输入 -> 退出录制
+@z 调用宏
+@@ 调用最新录制的宏
 
+9,可视化选择模式 v or V
+J 把选择行变成一行
+> or < 缩进
+= 自动缩进
+10,字符自动提示补齐 将之前输入的记录下来
+<c-n> or <c-p>
+11,:split or :vsplit 分屏上下 or 左右
+<c-w> + or - or _ or hjkl 增加尺寸 减少尺寸 最大化尺寸 分屏切换
+
+12,块操作
+window 下 <c-q>,linux下<c-v>
+hjkl选择块
+大写I,A插入字符,ESC执行
+
+
+13,区域选择
+visual模式下
+<action>a<object> <action>i<object>
+action:d or y or v
+object:w or s or p
+如"foo"
+vi"
+va"
+v2i"
+
+
+vim 配置和插件
+/*files乱码*/
+set fileencodings=gb2312,gb18030,utf-8
+set termencoding=utf-8
+set encoding=prc
+/*jsbeautify js格式化*/
+nnoremap <F4> :call g:Jsbeautify()<cr>
