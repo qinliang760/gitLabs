@@ -3,6 +3,8 @@ a > 在光标后插入
 o > 在当前行后插入行
 O > 在当前行前插入行
 cw > 替换从光标所在位置后到一个单词结尾的字符
+i > 
+100 i text ESC 输入100个text
 
 2.delete
 dd > 删除当前行 ndd 删除以当前行开始的n行
@@ -87,3 +89,4 @@ set termencoding=utf-8
 set encoding=prc
 /*jsbeautify js格式化*/
 nnoremap <F4> :call g:Jsbeautify()<cr>
+
