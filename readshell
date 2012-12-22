@@ -13,3 +13,12 @@ rm -rf
 cp a.txt b.txt
 11.chmod
 chmod 777 -R /path
+
+
+/* 程序安装 */
+
+wget http://nodejs/node-v0.8.7.tar.gz
+tar xvf node-v0.8.7.tar.gz
+cd node-v0.8.7
+./configure 检查配置
+make install

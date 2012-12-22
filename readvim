@@ -64,6 +64,9 @@ J 把选择行变成一行
 <c-n> or <c-p>
 11,:split or :vsplit 分屏上下 or 左右
 <c-w> + or - or _ or hjkl 增加尺寸 减少尺寸 最大化尺寸 分屏切换
+:only 取消当前分屏
+:vs 垂直
+:sv 水平
 
 12,块操作
 window 下 <c-q>,linux下<c-v>
@@ -80,6 +83,15 @@ object:w or s or p
 vi"
 va"
 v2i"
+
+14,diff
+1. vimdiff file1 file2
+2.vim file1
+vertical diffsplit file2
+
+15,替换
+:%s/Defaults/defaults/g 查找所有Defaults替换为defaults
+
 
 
 vim 配置和插件
