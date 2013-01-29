@@ -44,3 +44,9 @@ meta:{ banner:'/*! <%= pkg.name %> - v<%= pkg.version %> - '+ '<%= grunt.templat
 /* spm打包部署工具 */
 linux:sudo npm install spm -g
 windows:npm install spm -g
+
+/*grunt plugin*/
+npm install grunt-contrib-mincss --save-dev
+放置于项目grunt.js同一目录下
+配置grunt.js,grunt.loadNpmTasks("grunt-contrib-mincss")
+

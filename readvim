@@ -102,3 +102,7 @@ set encoding=prc
 /*jsbeautify js格式化*/
 nnoremap <F4> :call g:Jsbeautify()<cr>
 
+window 下vim说明
+vimfiles是用户自己的一个配置folder,而vim73是安装目录
+vim73中的plugin和vimfiles中的plugin作用是一样的
+建议把安装的插件放在vimfiles，备份起来比较容易
