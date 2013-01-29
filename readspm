@@ -1,0 +1,58 @@
+FYI:https://github.com/spmjs/wiki
+source:modules.spmjs.org
+
+1.nodejs和NPM安装
+2.npm install spm -g
+mpm -v
+会在user目录下生成.spm
+3.npm init 初始化项目模块信息
+4.npm build 把模块打包	
+5.npm install 从源获取安装相关模块
+6.npm deploy 部署模块到线上源
+
+/*搭建源服务*/
+建立一个源目录，创建config.json
+{"roots":["arale","gallery","test"]}
+这个roots是指这个源可以接收哪些root模块上传
+
+从官方源安装一些模块
+spm install gallery.jquery --to=.	//安装模块到当前目录
+spm install gallery --to=.	//批处理安装
+需要在arale和gallery下面创建config.json,为{}就行，只有这个才能表明这个目录是root目录
+
+初始化源信息
+spm sources --stable	//生成模块稳定版信息
+spm sources	//生成完成的源信息
+通过上面的命令可以处理当前目录的模块，产生出info.json，这样spm打包或者install就可以使用这个源了
+
+启动源服务
+spm server -p 8000
+localhost:8000可以访问
+
+
+
+/*开发一个模块*/
+
+创建一个模块目录
+mkdir usejquery
+cd usejquery
+spm init
+生成examples,src源files,tests测试，package.json配置file.
+package.json配置
+name:usejquery	//模块名
+version:1.0.0//版本号
+root:gallery	//放在哪个模块目录下
+dependencies:{"jquery":"gallery/jquery/1.8.3/jquery"}//可以不用spm install ，会自动去源里取
+
+部署已好的模块到源
+本地：spm deploy --to=e:/myfile/libs/source,再SVN到线上
+线上，要配置.spm中deploy部署
+
+找到本地源目录
+在新增的模块.js目录下创建package.json(不会自动生成？)
+{"root":"gallery","name":"userjquery","version":1.0.0}
+cd到源目录
+spm sources --stable
+spm sources
+新增的模块下会生成info.json
+提交到源，就可以spm install 安装使用了
